@@ -7,21 +7,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="index.php">KSI2025</a>
-    </div>
-  </nav>
-
   <div class="container py-5">
     <h2 class="text-center mb-4">Daftar Mahasiswa</h2>
-    <table class="table table-bordered table-striped">
+    <a href="tambah.php" class="btn btn-primary mb-3">Tambah Data</a>
+    <table class="table table-bordered">
       <thead class="table-primary">
         <tr>
           <th>No</th>
           <th>NPM</th>
           <th>Nama</th>
-          <th>Program Studi</th>
+          <th>Prodi</th>
         </tr>
       </thead>
       <tbody>
@@ -41,11 +36,5 @@
       </tbody>
     </table>
   </div>
-
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <small>&copy; 2025 KSI2025</small>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
