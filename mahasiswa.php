@@ -1,4 +1,6 @@
-<?php include 'koneksi.php'; ?>
+<?php 
+include 'koneksi.php'; // pastikan nama file ini benar dan ada di folder yang sama
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -26,12 +28,15 @@
       </thead>
       <tbody>
         <?php
-        $no = 1;
+        // Pastikan koneksi aktif
+        if (!$koneksi) {
+          die("<tr><td colspan='4' class='text-center text-danger'>Koneksi ke database gagal!</td></tr>");
+        }
 
-        // Pastikan koneksi benar
+        $no = 1;
         $query = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
 
-        if (mysqli_num_rows($query) > 0) {
+        if ($query && mysqli_num_rows($query) > 0) {
           while ($data = mysqli_fetch_assoc($query)) {
             echo "<tr>
                     <td class='text-center'>{$no}</td>
@@ -52,3 +57,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
